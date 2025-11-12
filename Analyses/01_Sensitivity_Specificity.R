@@ -5,13 +5,12 @@ library(tidyverse)
 
 # Function to calculate diagnostic metrics from a confusion dataframe
 calc_metrics <- function(df) {
-  # Automatically identify the "positive" label
   positive_label <- df$Clinical[1] 
   patho_label <- df$Pathological[1]  
   
   mat <- xtabs(Count ~ Pathological + Clinical, data = df)
   
-  # Extract counts using exact string matches from table
+  # Extract counts from table
   TP <- mat[patho_label, positive_label]
   FP <- mat[setdiff(rownames(mat), patho_label), positive_label]
   FN <- mat[patho_label, setdiff(colnames(mat), positive_label)]
