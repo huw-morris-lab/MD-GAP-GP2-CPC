@@ -1,5 +1,7 @@
-# Read ancestry data generated via Genotools
+# Ancestry analysis examining associations between genetically defined ancestry and pathology
+# Last updated in November 2025
 
+# Read ancestry data generated via Genotools
 # For demographics
 ANCESTRY <- read.table("$DIR/all_ids_with_ancestry.txt", header = T) %>%
   dplyr::rename(gp2_id = FID) %>%
