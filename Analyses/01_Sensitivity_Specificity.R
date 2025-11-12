@@ -1,4 +1,6 @@
-# Sensitivity & specificity analysis
+# Sensitivity & Specificity analysis 
+# Compares clinical and pathological diagnoses to assess diagnostic accuracy (sensitivity, specificity, PPV, NPV).
+# Last updated November 2025
 
 # Loading library
 library(tidyverse)
@@ -79,8 +81,6 @@ LBD$GROUP <- case_when(
   LBD$CLIN_DX == "PD" ~ "PD",
   LBD$CLIN_DX %in% c("PDD", "DLB") ~ "PDD_DLB"
 )
-
-
 
 ppv_summary <- LBD %>%
   group_by(GROUP) %>%
