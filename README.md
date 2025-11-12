@@ -3,5 +3,6 @@ This repository contains code for the analyses conducted in "Clinical features, 
 The aim of the study is to assess clinico-pathological correlation in individuals carrying disease-associated and risk genetic variants, the frequency of clinical misdiagnosis and the impact of co-pathology.
 
 ## Data Statement 
-- All MDGAP/GP2 data are hosted in collaboration with the Accelerating Medicines Partnership in Parkinson's Disease and are available via application on the website. The clinical and genetic data is available via the GP2 website (https://gp2.org). Genotyping imputation, quality control, ancestry prediction, and processing were performed using GenoTools (v1.3.5), publicly available on GitHub.
+- All MDGAP/GP2 data are hosted in collaboration with the Accelerating Medicines Partnership in Parkinson's Disease and are available via application on the website.
+- The clinical and genetic data is available via the GP2 website (https://gp2.org). Genotyping imputation, quality control, ancestry prediction, and processing were performed using GenoTools (v1.3.5), publicly available on GitHub.
 - Pathological staging and co-pathology data will be included in Release 11 of GP2, scheduled for December 2025.
