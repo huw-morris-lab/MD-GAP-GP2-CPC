@@ -1,11 +1,15 @@
+# Generates visualizations and analyzes associations between pathological staging and genetic variants
+# Last updated in October 2025
+
 ########### Stacked bar chart ###########
-### LBD SUBTYPE ###
+# LBD SUBTYPE
 library(dplyr)
 library(stringr)
 library(ggplot2)
 library(RColorBrewer)
 library(scales)
 
+# Clean data
 df <- df %>%
   filter(
     !is.na(LBD_Subtype),
@@ -51,7 +55,7 @@ p <- ggplot(df, aes(x = GENE_TYPE, y = Proportion, fill = LBD_Subtype)) +
   )
 
 
-### BRAAK NFT ###
+# BRAAK NFT 
 # Group into Braak NFT categories including stage 0
 df <- df %>%
   filter(!is.na(BRAAK_NFT)) %>%
@@ -113,7 +117,7 @@ model <- polr(as.factor(Mckeith_coded) ~ Mutation_status + sex + age_at_death + 
 # Extract the model summary 
 model_summary <- summary(model)
 
-########### SURVIVAL ###########
+########### SURVIVAL ANALYSIS ###########
 library(survival)
 library(survminer)
 library(broom)
@@ -123,7 +127,6 @@ df$GENE_TYPE <- factor(df$GENE_TYPE, levels = c("GBA1 PD RISK", "GBA1 GD CAUSING
 
 # Create event variable
 df$event <- 1 
-
 
 # Create survival object
 surv_obj <- Surv(time = df$DX1, event = df$event)
@@ -159,7 +162,6 @@ km_plot <- ggplot(km_df, aes(x = time, y = estimate, color = GENE_TYPE)) +
   theme_minimal()
 
 km_plot
-
 
 # Set "NO MUTATION" as reference category
 df$GENE_TYPE <- relevel(as.factor(df$GENE_TYPE), ref = "NO MUTATION")
