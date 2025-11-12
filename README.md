@@ -22,10 +22,12 @@ The aim of the study is to assess clinico-pathological correlation in individual
   |     └── 04_Path_Stages.R
   |     └── 05_Ancestry.R
   └── README.md 
+</pre>
 
-  # Software
-  | Software |        Version(s)    |     Resource URL     |     RRID    |      Notes    |
-|-----------|----------------------|---------------------|--------------|----------------|
+# Software
+  
+| Software |        Version(s)    |     Resource URL    |     RRID    |      Notes     |
+|----------|----------------------|---------------------|-------------|----------------|
 |R Project for Statistical Computing| 4.5.1  | (http://www.r-project.org/)| RRID:SCR_001905 | tidyverse; dplyr; tidyr; ggplot; data.table; used for general data wrangling/plotting/analyses |
 |PLINK| 2.0  |  (https://www.cog-genomics.org/plink/2.0/) | RRID:SCR_001757 | used for genetic analyses |
 |samtools (bcftools)| 1.9 |  (https://samtools.github.io/bcftools/) | RRID:SCR_002105	 | VCF maniplulation |
