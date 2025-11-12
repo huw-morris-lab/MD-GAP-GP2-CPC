@@ -14,12 +14,7 @@ The aim of the study is to assess clinico-pathological correlation in individual
 # Repository Orientation
 <pre> THIS_REPO/ 
   ├── analyses/ 
-  |     ├── 00_notebook.ipynb
-  |     └── 01_notebook.ipynb
-  ├── figures/
-  |     └── 00_figure.png
-  ├── tables/
-  |     └── 00_table.csv
-  ├── LICENSE
+  |     ├── 00_Data_Clean.r
+  |     └── 01_Sensitivity_Specificity.r
   └── README.md 
 
