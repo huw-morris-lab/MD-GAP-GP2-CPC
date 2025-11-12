@@ -15,7 +15,6 @@ The aim of the study is to assess clinico-pathological correlation in individual
 - The analyses/ directory includes all analyses discussed in the manuscript
 <pre> THIS_REPO/ 
   ├── Analyses/ 
-  |     ├── 00_Data_Clean.R
   |     └── 01_Sensitivity_Specificity.R
   |     └── 02_Copathologies.R
   |     └── 03_Genes_Extraction.R
