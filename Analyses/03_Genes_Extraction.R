@@ -1,3 +1,6 @@
+# Script to extract genes of interest
+# Last updated in August 2025
+
 # PART 1
 ---
 # STEP 1: use plink2 to convert raw genotypes from each ancestry and brain bank into txt files after doing QC (--geno and --mind)
