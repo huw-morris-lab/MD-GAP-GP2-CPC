@@ -1,4 +1,7 @@
-## Import PCs ##
+# Analysis of associations between clinical characteristics and co-pathologies
+# Last updated in November 2025
+
+# Import genetic PCs generated via PLINK2 for covariates
 DIR=path/to/directory/
 
 ALL_PC <- read.table("$DIR/ALL_PC.txt")%>%
